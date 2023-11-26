@@ -1,3 +1,5 @@
+//Joanna Nicole Uriostegui Magaña
+//A01711853
 #include <iostream>
 #include <string>
 using namespace std;
@@ -8,11 +10,13 @@ using namespace std;
 
 class Dulces:public Producto{
 	private:
+		//atributos generales
 		int cantXBolsa;
 		string marca;
 		string tipoDSabor;
 		
 	public:
+		//constructores
 		Dulces() : Producto() {
 			this-> cantXBolsa = 0;
 			this-> marca = "NA";
@@ -22,6 +26,7 @@ class Dulces:public Producto{
 		: Producto(tipoDProducto, nombre, id, precio), cantXBolsa(cantidad), marca(marca), tipoDSabor(tipoSabor){		
 		}
 		
+		//getter y setters
 		int getCantXBolsa(){
 			return cantXBolsa;
 		}

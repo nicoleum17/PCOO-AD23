@@ -1,3 +1,5 @@
+//Joanna Nicole Uriostegui Magaña
+//A01711853
 #include <iostream>
 #include <string>
 using namespace std;
@@ -11,13 +13,16 @@ class Frutas:public Producto{
 		float precioXKilo;
 		
 	public:
+		//constructores
 		Frutas() : Producto() {
 			this-> precioXKilo = 0;
 		}
+		
 		Frutas(string tipoDProducto, string nombre, int id, float precio, float xKilo)
 		: Producto(tipoDProducto, nombre, id, precio), precioXKilo(xKilo){		
 		}
 		
+		//getter y setter
 		float getPrecioXKilo(){
 			return precioXKilo;
 		}

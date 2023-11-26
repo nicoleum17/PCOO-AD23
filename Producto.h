@@ -1,3 +1,5 @@
+//Joanna Nicole Uriostegui Magaña
+//A01711853
 #include <iostream>
 #include <string>
 using namespace std;

@@ -1,3 +1,10 @@
+//Joanna Nicole Uriostegui Magaña
+//A01711853
+//Ult mod. Nov 26 2023
+
+//Código que permite modificar un inventario agregando nuevos productos
+//así como, obtener un total para vender los productos.
+
 #include <iostream>
 #include <string>
 
@@ -60,37 +67,54 @@ int main() {
 		
 		if( ans > 3 ){
 			cout<<" \n La opcion no es valida. Elige otra opcion.\n";
-		} else {
+		} 
+		else {
 			switch(ans){
 				case 1:
-					//mostramos el inventario 
+					//mostramos el inventario y llamamos el método para calcular la venta
 					inventario.mostrarInventario();
 					inventario.calcularTotal();
 					
 					break;
 				
 				case 2:
-					//while para agregar varios productos
+					
 					while( respuesta != 'N'){
+						//while para agregar varios productos
 						if( respuesta == 'S' ){
 							cout<<"Que tipo de producto estas ingresando? Dulce o Fruta (D/F): ";
 							cin>>prod;
+							
 							if( prod  == 'D' ){
 								tipoDProd = 'D';
-								cout << "\nIngresa el nombre del nuevo producto: "; cin >> nom;
-								cout << "Ingresa el id: "; cin >> ID;
-								cout << "Ingresa el precio: "; cin >> pre;
-								cout << "Ingresa la cantidad por bolsa: "; cin >> cantidad;
-						        cout << "Ingresa la marca: "; cin >> marca;
-						        cout << "Ingresa el tipo de sabor: "; cin >> tipoSabor;
+								cout << "\nIngresa el nombre del nuevo producto: "; 
+								cin >> nom;
+								cout << "Ingresa el id: "; 
+								cin >> ID;
+								cout << "Ingresa el precio: "; 
+								cin >> pre;
+								cout << "Ingresa la cantidad por bolsa: "; 
+								cin >> cantidad;
+						        cout << "Ingresa la marca: "; 
+								cin >> marca;
+						        cout << "Ingresa el tipo de sabor: "; 
+								cin >> tipoSabor;
+								
 								nuevo = Dulces( tipoDProd, nom, ID, pre, cantidad, marca, tipoSabor );
 								inventario.anyadirProductos(nuevo);
-							} else if( prod == 'F' ){
+							} 
+							
+							else if( prod == 'F' ){
 								tipoDProd = 'F';
-								cout << "\nIngresa el nombre del nuevo producto: "; cin >> nom;
-								cout << "Ingresa el id: "; cin >> ID;
-								cout << "Ingresa el precio: "; cin >> pre;
-								cout << "Ingresa el precio por kilo: "; cin >> xKilo;
+								cout << "\nIngresa el nombre del nuevo producto: "; 
+								cin >> nom;
+								cout << "Ingresa el id: "; 
+								cin >> ID;
+								cout << "Ingresa el precio: "; 
+								cin >> pre;
+								cout << "Ingresa el precio por kilo: "; 
+								cin >> xKilo;
+								
 								nuevoo = Frutas( tipoDProd, nom, ID, xKilo, xKilo );
 								inventario.anyadirProductos( nuevoo );
 							}

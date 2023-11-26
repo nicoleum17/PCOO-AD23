@@ -1,3 +1,5 @@
+//Joanna Nicole Uriostegui Magaña
+//A01711853
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,6 +14,7 @@ using namespace std;
 
 class Inventario {
     private:
+    	//atributo, componente de productos
         vector<Producto> vectorProductos;
     public:
     	//constructores
@@ -21,23 +24,30 @@ class Inventario {
         }
         
         //metodos
-        void anyadirProductos(Producto &productos){
+        void anyadirProductos(Producto productos){
+        	//añade al final del vector el producto nuevo
             vectorProductos.push_back(productos);
         }
         
         void mostrarInventario(){
+        	//recorriendo el arreglo, imprime el inventario
         	cout << "Inventario: \n";
             for(unsigned int i = 0;i < vectorProductos.size();i++){
-		    	cout << "\nID: " << vectorProductos[i].getID() << " | Nombre: " << vectorProductos[i].getNombre() << " | Precio: " << vectorProductos[i].getPrecio() << endl;
+		    	cout << "\nID: " << vectorProductos[i].getID();
+				cout << " | Nombre: " << vectorProductos[i].getNombre();
+				cout << " | Precio: " << vectorProductos[i].getPrecio() << endl;
 			}
         }
         
+        //getter
         Producto getProd(){
             return vectorProductos[0];
         }
         
         float calcularTotal(){
-	
+			//recorriendo el arreglo, busca el id seleccionado
+			//y suma al total el precio del producto.
+
 			float total = 0, cantDProd = 0;
 			char respuesta = 'S';
 			
@@ -50,7 +60,6 @@ class Inventario {
 				    cout << "\nIngresa el ID del producto: ";
 				    cin >> idSeleccionado;
 				    
-				    //buscar el id y sumar al total el precio
 					for (int i = 0; i < vectorProductos.size(); ++i) {
 				        if (vectorProductos[i].getID() == idSeleccionado) {
 				        	cantDProd ++;
@@ -59,10 +68,12 @@ class Inventario {
 				        }
 				    }
 				}
-				cout<<"\nDeseas agregar más productos? (S/N): "; cin >> respuesta;
+				cout<<"\nDeseas algun otro producto? (S/N): "; 
+				cin >> respuesta;
 			}
-			cout << "\nHas seleccionado " << cantDProd;
-		    cout << "\nTotal a pagar: $" << total << "\n";
+			//mensaje final
+			cout << "\nHas seleccionado " << cantDProd << " productos.";
+		    cout << "\nTotal a pagar: $" << total << "\n\n";
 		
 		    return 0;
 		}
