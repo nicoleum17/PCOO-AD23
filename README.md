@@ -7,3 +7,6 @@ Mediante las cuales perimitirá al usuario añadir la cantidad deseada de produc
 Las clases Frutas y Dulces serán clases hijas de la clase Producto por lo que compartirán sus atributos pero también tendrán los propios. Mientras que la clase Inventario estará compuesta por un vector de Productos el cual se recorrerá para que, mediante el id de los productos ir sumando al total el precio.
 
 El código contara con un inventario base por lo que desde un inicio mediante un menú podrás seleccionar si realizar una venta o añadir productos al inventario y finalizar o poder realizar un venta después.
+
+Para reevaluar: Modelo un diagrama de clase útil para solucionar un problema utilizando UML.
+Nota: Hay dos archivos Dulce y Dulces así como Fruta y Frutas ya que al inicio tenia los nombres de las clases en plural pero después lo modifique por lo que no pude sobreescribir ni renombrar los archivos.
