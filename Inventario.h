@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 #include "Producto.h"
-#include "Dulces.h"
-#include "Frutas.h"
+#include "Dulce.h"
+#include "Fruta.h"
 
 using namespace std;
 

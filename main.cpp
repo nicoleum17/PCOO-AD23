@@ -10,8 +10,8 @@
 
 //incluir clases
 #include "Inventario.h"
-#include "Dulces.h"
-#include "Frutas.h"
+#include "Dulce.h"
+#include "Fruta.h"
 
 using namespace std;
 
@@ -44,20 +44,20 @@ int main() {
 	string tipoDProd;
 	
 	//Instanciar Objetos
-	Dulces nuevo;
-	Frutas nuevoo;
+	Dulce nuevo;
+	Fruta nuevoo;
 	Inventario inventario;
 	
 	//creamos una base del inventario.
-	nuevo = Dulces( "Dulce", "Paletas", 235647, 12.00, 30, "Vero", "Picoso" );
+	nuevo = Dulce( "Dulce", "Paletas", 235647, 12.00, 30, "Vero", "Picoso" );
 	inventario.anyadirProductos( nuevo );
-	nuevo = Dulces( "Dulce", "Chicles", 21456, 1.50, 10, "Bubaaloo", "Dulce" );
+	nuevo = Dulce( "Dulce", "Chicles", 21456, 1.50, 10, "Bubaaloo", "Dulce" );
 	inventario.anyadirProductos( nuevo );
-	nuevoo = Frutas( "Fruta", "Manzana", 302115, 6.25, 25.50 );
+	nuevoo = Fruta( "Fruta", "Manzana", 302115, 6.25, 25.50 );
 	inventario.anyadirProductos( nuevoo );
-	nuevoo = Frutas( "Fruta", "Platano", 396523, 9.50, 36.70 );
+	nuevoo = Fruta( "Fruta", "Platano", 396523, 9.50, 36.70 );
 	inventario.anyadirProductos( nuevoo );
-	nuevo = Dulces( "Dulce", "Bombones", 223154, 5, 25, "de la Rosa", "Dulce" );
+	nuevo = Dulce( "Dulce", "Bombones", 223154, 5, 25, "de la Rosa", "Dulce" );
 	inventario.anyadirProductos( nuevo );
 
 	//ciclo para visualizar el menu
@@ -100,7 +100,7 @@ int main() {
 						        cout << "Ingresa el tipo de sabor: "; 
 								cin >> tipoSabor;
 								
-								nuevo = Dulces( tipoDProd, nom, ID, pre, cantidad, marca, tipoSabor );
+								nuevo = Dulce( tipoDProd, nom, ID, pre, cantidad, marca, tipoSabor );
 								inventario.anyadirProductos(nuevo);
 							} 
 							
@@ -115,7 +115,7 @@ int main() {
 								cout << "Ingresa el precio por kilo: "; 
 								cin >> xKilo;
 								
-								nuevoo = Frutas( tipoDProd, nom, ID, xKilo, xKilo );
+								nuevoo = Fruta( tipoDProd, nom, ID, xKilo, xKilo );
 								inventario.anyadirProductos( nuevoo );
 							}
 							
