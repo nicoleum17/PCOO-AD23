@@ -1,14 +1,14 @@
-//Joanna Nicole Uriostegui MagaÃ±a
+//Joanna Nicole Uriostegui Magaña
 //A01711853
 #include <iostream>
 #include <string>
 using namespace std;
 #include "Producto.h"
 
-#ifndef DULCES
-#define DULCES
+#ifndef DULCE
+#define DULCE
 
-class Dulces:public Producto{
+class Dulce:public Producto{
 	private:
 		//atributos generales
 		int cantXBolsa;
@@ -17,12 +17,12 @@ class Dulces:public Producto{
 		
 	public:
 		//constructores
-		Dulces() : Producto() {
+		Dulce() : Producto() {
 			this-> cantXBolsa = 0;
 			this-> marca = "NA";
 			this-> tipoDSabor =  "NA";
 		}
-		Dulces(string tipoDProducto, string nombre, int id, float precio, int cantidad, string marca, string tipoSabor)
+		Dulce(string tipoDProducto, string nombre, int id, float precio, int cantidad, string marca, string tipoSabor)
 		: Producto(tipoDProducto, nombre, id, precio), cantXBolsa(cantidad), marca(marca), tipoDSabor(tipoSabor){		
 		}
 		
