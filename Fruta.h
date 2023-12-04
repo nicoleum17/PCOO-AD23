@@ -1,4 +1,4 @@
-//Joanna Nicole Uriostegui Magaña
+//Joanna Nicole Uriostegui MagaÃ±a
 //A01711853
 #include <iostream>
 #include <string>
